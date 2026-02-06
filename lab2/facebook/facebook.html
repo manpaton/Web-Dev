@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Facebook - Выполните вход или зарегистрируйтесь</title>
+  <style>
+    body {
+      font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      margin: 0;
+    }
+    h2{
+      margin: 0;
+    }
+    #globalContainer {
+      display: flex;
+      justify-content: center;
+      gap: 100px;
+      font-family: inherit;
+      padding-bottom: 112px;
+      padding-top: 72px;
+      position: relative;
+      height: 496px;
+      margin: 0 40px;
+      width: auto;
+      background: #f2f4f7;
+      min-width: 500px;
+    }
+    div{
+      display:block;
+      unicode-bidi: isolate;
+    }
+
+    .leftSide {
+      text-align: left;
+      width: 400px;
+      box-sizing: border-box;
+      margin-left: 0;
+      padding-right: 32px;
+      display:inline-block;
+      vertical-align: top;
+    }
+
+    .rightSide {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width:396px;
+    }
+
+    img.fb_logo {
+      height: 106px;
+    }
+
+    .leftSidePadding {
+      padding-top: 112px;
+    }
+    .FacebookFontType{
+      font-size: 24px;
+      line-height: 28px;
+      width:auto;
+      font-weight: 400;
+      color: #1c1e21;
+      padding: 0 0 20px;
+      display: inline-block;
+      margin: 0;
+      font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    }
+    .FacebookPadding{
+      display:inline-block;
+      letter-spacing: normal;
+    }
+
+    .inputText{
+      font-size: 17px;
+      width: 330px;
+      border-radius: 6px;
+      padding:14px 16px;
+      height: 22px;
+      line-height: 16px;
+      vertical-align: middle;
+      border: 1px solid #dddfe2;
+    }
+
+    .inputBlock{
+      display:inline-block;
+      margin: 6px 0;
+      width: 364px;
+    }
+
+    .submitButton{
+      background-color: #0866ff;
+      border: none;
+      border-radius: 6px;
+      font-size: 20px;
+      line-height: 48px;
+      padding: 0 16px;
+      width: 332px;
+      color: #fff;
+      font-weight: 700;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .forgetPasswordPadding{
+      padding-top:10px;
+    }
+    .forgetPassword{
+      color: #0866ff;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      cursor:pointer;
+    }
+
+    .line {
+
+      width: 90%;
+      height: 1px;
+      background-color: #ccc;
+      margin: 20px auto;
+      display:flex;
+    }
+
+    .creatingNewAccount{
+      background-color:#42b72a;
+      border: none;
+      border-radius: 6px;
+      font-size: 17px;
+      line-height: 48px;
+      padding: 0 16px;
+      color: #fff;
+      font-weight: 700;
+      text-align: center;
+      cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
+      white-space: nowrap;
+      margin-bottom: 20px;
+    }
+
+    .lastButton{
+      border-top: none;
+      color: #1c1e21;
+      font-size: 14px;
+      font-weight: 400;
+      text-align: center;
+      padding-top: 20px;
+    }
+
+    .lastText{
+      font-weight: 600;
+      color: inherit;
+      cursor: pointer;
+      text-decoration: none;
+      width:100%;
+      text-align: center;
+    }
+    .rightBlock{
+      padding-bottom: 24px;
+      padding-top: 10px;
+      align-items: center;
+      background-color: #fff;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px #0000001a, 0 8px 16px #0000001a;
+      box-sizing: border-box;
+      margin: 40px 0 0;
+      width:396px;
+      height: auto;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div id="globalContainer">
+
+  <div class="leftSide">
+    <div class = "leftSidePadding">
+      <img src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg" alt="Facebook" class="fb_logo">
+    </div>
+    <div class = "FacebookPadding">
+      <h2 class="FacebookFontType" >Facebook помогает вам всегда оставаться на связи и общаться со своими знакомыми.</h2>
+    </div>
+  </div>
+
+  <div class="rightSide">
+    <div class = "rightBlock">
+      <div class="inputBlock">
+        <input type="text" class="inputText" placeholder="Электронный адрес или номер телефона" aria-label="Электронный адресс или номер телефона">
+      </div>
+      <div class="inputBlock">
+        <input type="text" class="inputText" placeholder="Пароль" aria-label="Пароль">
+      </div>
+      <div>
+        <button type="submit" class="submitButton">Вход</button>
+      </div>
+      <div class="forgetPasswordPadding">
+        <a href="#" class="forgetPassword">Забыли пароль?</a>
+      </div>
+      <div class="line"></div>
+      <div>
+        <a href="#" role="button" class="creatingNewAccount">Создать новый аккаунт</a>
+      </div>
+    </div>
+    <div class="lastButton">
+      <a href="#" class="lastText">Создать страницу</a> знаменитости, музыкальной группы или компании.
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
