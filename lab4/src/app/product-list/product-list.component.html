@@ -1,0 +1,27 @@
+<div class="products-container">
+  <div class="product-card" *ngFor="let product of products; let i = index">
+    <div class="image-gallery">
+      <button class="arrow left" (click)="prevImage(i)">&#10094;</button>
+      <img [src]="product.images[currentImageIndex[i]]" class="main-image" />
+      <button class="arrow right" (click)="nextImage(i)">&#10095;</button>
+    </div>
+
+    <div class="thumbnails">
+      <img *ngFor="let img of product.images; let j = index"
+           [src]="img"
+           (click)="setCurrentImage(i, j)"
+           [class.active]="currentImageIndex[i] === j"
+           class="thumbnail-image" />
+    </div>
+
+    <h3>{{ product.name }}</h3>
+    <p>{{ product.description }}</p>
+    <p>₸{{ product.price | number }}</p>
+
+    <a [href]="product.link" target="_blank" class="buy-btn">Перейти</a>
+    <div class="share-buttons">
+      <button (click)="shareWhatsApp(product)">WhatsApp</button>
+      <button (click)="shareTelegram(product)">Telegram</button>
+    </div>
+  </div>
+</div>
