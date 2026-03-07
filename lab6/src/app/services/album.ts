@@ -45,20 +45,21 @@ export class AlbumService {
   getAlbumPhotos(id: number): Observable<Photo[]> {
     return this.http.get<Photo[]>(`${this.baseUrl}/albums/${id}/photos`);
   }
-
+  
+  
   createAlbum(payload: { userId: number; title: string }): Observable<Album> {
-    return this.http.post<Album>(`${this.baseUrl}/albums`, payload).pipe(
-      map((created) => ({
-        ...created,
-        id: created.id ?? 101,
-        userId: payload.userId,
-        title: payload.title
-      })),
-      map((created) => {
-        this.createdAlbums = [created, ...this.createdAlbums];
-        return created;
-      })
-    );
+      return this.http.post<Album>(`${this.baseUrl}/albums`, payload).pipe(
+        map((created) => ({
+          ...created,
+          id: created.id ?? 101,
+          userId: payload.userId,
+          title: payload.title
+        })),
+        map((created) => {
+          this.createdAlbums = [created, ...this.createdAlbums];
+          return created;
+        })
+      );
   }
 
   updateAlbum(album: Album): Observable<Album> {
@@ -84,4 +85,6 @@ export class AlbumService {
 
     return this.http.delete<void>(`${this.baseUrl}/albums/${id}`);
   }
+
+  
 }
